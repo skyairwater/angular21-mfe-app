@@ -1,0 +1,5 @@
+{
+	"merchant": "http://localhost:4201/remoteEntry.json",
+	"credit": "http://localhost:4202/remoteEntry.json",
+	"wealth": "http://localhost:4203/remoteEntry.json"
+}

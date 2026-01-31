@@ -1,0 +1,21 @@
+{
+  "hash": "a2dd822c",
+  "configHash": "f2632cdb",
+  "lockfileHash": "226b5752",
+  "browserHash": "f279ccce",
+  "optimized": {
+    "@angular-architects/native-federation": {
+      "src": "../../../../../../node_modules/@angular-architects/native-federation/src/index.js",
+      "file": "@angular-architects_native-federation.js",
+      "fileHash": "137a1fd8",
+      "needsInterop": false
+    },
+    "es-module-shims": {
+      "src": "../../../../../../node_modules/es-module-shims/dist/es-module-shims.js",
+      "file": "es-module-shims.js",
+      "fileHash": "87b29b89",
+      "needsInterop": true
+    }
+  },
+  "chunks": {}
+}
