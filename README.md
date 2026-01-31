@@ -47,9 +47,20 @@ The project consists of a Shell application and three Remote applications:
    ```
 
 3. **Access the App**
-   Open your browser to [http://localhost:4200](http://localhost:4200).
+   Open your browser to [http://localhost:4200](http://localhost:4200). You will be redirected to the Login page.
+
+## Authentication & Roles
+
+This application uses Role-Based Access Control (RBAC).
+
+| Username | Password | Role | Access |
+|---|---|---|---|
+| `merchantuser` | `abcd123` | merchant | Merchant App only |
+| `credituser` | `abcd123` | credit | Credit App only |
+| `wealthuser` | `abcd123` | wealth | Wealth App only |
+| `admin` | `abcd123` | admin | All Apps |
 
 ## Navigation
-- `/merchant` - Loads the Merchant MFE
-- `/credit` - Loads the Credit MFE
-- `/wealth` - Loads the Wealth MFE
+- `/merchant` - Loads the Merchant MFE (Restricted)
+- `/credit` - Loads the Credit MFE (Restricted)
+- `/wealth` - Loads the Wealth MFE (Restricted)
