@@ -8,6 +8,7 @@
     "start:merchant": "ng serve merchant",
     "start:credit": "ng serve credit",
     "start:wealth": "ng serve wealth",
+    "start:all": "npm-run-all --parallel start:shell start:merchant start:credit start:wealth",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -47,6 +48,7 @@
     "@angular/compiler-cli": "^21.1.0",
     "autoprefixer": "^10.4.24",
     "jsdom": "^27.1.0",
+    "npm-run-all": "^4.1.5",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.19",
     "typescript": "~5.9.2",

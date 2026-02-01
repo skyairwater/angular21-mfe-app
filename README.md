@@ -24,27 +24,16 @@ The project consists of a Shell application and three Remote applications:
 
 2. **Run the Application**
 
-   You can run the entire system by starting each application. For convenience, use separate terminal windows:
-
-   **Terminal 1: Merchant**
+   You can run the entire system (Shell and all 3 remotes) with a single command:
    ```bash
-   npm run start:merchant
+   npm run start:all
    ```
 
-   **Terminal 2: Credit**
-   ```bash
-   npm run start:credit
-   ```
-
-   **Terminal 3: Wealth**
-   ```bash
-   npm run start:wealth
-   ```
-
-   **Terminal 4: Shell**
-   ```bash
-   npm run start:shell
-   ```
+   Alternatively, you can run each application in a separate terminal:
+   - **Shell**: `npm run start:shell` (Port 4200)
+   - **Merchant**: `npm run start:merchant` (Port 4201)
+   - **Credit**: `npm run start:credit` (Port 4202)
+   - **Wealth**: `npm run start:wealth` (Port 4203)
 
 3. **Access the App**
    Open your browser to [http://localhost:4200](http://localhost:4200). You will be redirected to the Login page.
