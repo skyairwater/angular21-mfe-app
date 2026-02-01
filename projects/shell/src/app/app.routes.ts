@@ -29,8 +29,8 @@ export const routes: Routes = [
     },
     {
         path: 'wealth',
-        loadComponent: () =>
-            loadRemoteModule('wealth', './Component').then((m) => m.App),
+        loadChildren: () =>
+            loadRemoteModule('wealth', './Routes').then((m) => m.routes),
         canActivate: [authGuard],
         data: { role: 'wealth' }
     },
