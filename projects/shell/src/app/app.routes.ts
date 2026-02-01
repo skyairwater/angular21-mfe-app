@@ -22,8 +22,8 @@ export const routes: Routes = [
     },
     {
         path: 'credit',
-        loadComponent: () =>
-            loadRemoteModule('credit', './Component').then((m) => m.App),
+        loadChildren: () =>
+            loadRemoteModule('credit', './Routes').then((m) => m.routes),
         canActivate: [authGuard],
         data: { role: 'credit' }
     },
