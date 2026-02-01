@@ -2,14 +2,17 @@
   <!-- Show Navigation only if logged in -->
   <nav *ngIf="authService.isLoggedIn()" class="flex justify-between items-center mb-5 border-b border-gray-300 pb-2.5">
 
-    <div class="flex gap-5">
+    <div class="flex gap-2">
       <!-- Show links based on Role Access -->
-      <a *ngIf="authService.hasAccess('merchant')" routerLink="/merchant" routerLinkActive="active"
-        class="no-underline font-bold text-gray-800">Merchant</a>
-      <a *ngIf="authService.hasAccess('credit')" routerLink="/credit" routerLinkActive="active"
-        class="no-underline font-bold text-gray-800">Credit</a>
-      <a *ngIf="authService.hasAccess('wealth')" routerLink="/wealth" routerLinkActive="active"
-        class="no-underline font-bold text-gray-800">Wealth</a>
+      <a *ngIf="authService.hasAccess('merchant')" routerLink="/merchant"
+        routerLinkActive="bg-blue-600 text-white shadow-sm"
+        class="px-4 py-2 rounded-lg no-underline font-bold text-gray-700 hover:bg-gray-100 transition-all">Merchant</a>
+      <a *ngIf="authService.hasAccess('credit')" routerLink="/credit"
+        routerLinkActive="bg-indigo-600 text-white shadow-sm"
+        class="px-4 py-2 rounded-lg no-underline font-bold text-gray-700 hover:bg-gray-100 transition-all">Credit</a>
+      <a *ngIf="authService.hasAccess('wealth')" routerLink="/wealth"
+        routerLinkActive="bg-purple-600 text-white shadow-sm"
+        class="px-4 py-2 rounded-lg no-underline font-bold text-gray-700 hover:bg-gray-100 transition-all">Wealth</a>
     </div>
 
     <div class="flex items-center gap-4">
