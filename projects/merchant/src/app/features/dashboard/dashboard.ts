@@ -9,6 +9,9 @@ import { CommonModule, DecimalPipe, CurrencyPipe } from '@angular/common';
     templateUrl: './dashboard.html',
 })
 export class DashboardComponent implements OnInit, OnDestroy {
+    // UI State
+    public isLoading = signal(true);
+
     // Stats Signals
     public totalRevenue = signal(12450.50);
     public activeOrders = signal(42);
@@ -26,9 +29,22 @@ export class DashboardComponent implements OnInit, OnDestroy {
         { id: 'ORD-9918', customer: 'Elena Gilbert', amount: 45.99, status: 'Flagged', time: '1 hour ago' },
     ]);
 
+    // Bar Chart Data
+    public categories = signal([
+        { name: 'Electronics', percentage: 75, color: 'bg-blue-500' },
+        { name: 'Fashion', percentage: 45, color: 'bg-purple-500' },
+        { name: 'Home & Garden', percentage: 60, color: 'bg-green-500' },
+        { name: 'Books', percentage: 30, color: 'bg-orange-500' },
+    ]);
+
     private updateInterval: any;
 
     ngOnInit() {
+        // Mock loading time
+        setTimeout(() => {
+            this.isLoading.set(false);
+        }, 2000);
+
         // Simulate real-time data ticks
         this.updateInterval = setInterval(() => {
             // Tick revenue up slightly
