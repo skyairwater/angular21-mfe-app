@@ -1,17 +1,23 @@
-<div class="login-container">
-    <div class="login-box">
+<div class="flex flex-col justify-center items-center h-screen bg-gray-100">
+    <h1 class="text-3xl font-bold text-gray-800 mb-8">Angular 21 Micro Fronend demo</h1>
+    <div class="bg-white p-10 rounded-lg shadow-md w-[400px]">
         <h2>Login</h2>
-        <div class="form-group">
-            <label>Username</label>
-            <input type="text" [(ngModel)]="username" placeholder="merchantuser, credituser, wealthuser" />
+        <div class="mb-5">
+            <label class="block mb-1.5 font-bold">Username</label>
+            <input type="text" [(ngModel)]="username" placeholder="merchantuser, credituser, wealthuser"
+                class="w-full p-2 box-border border border-gray-300 rounded" />
         </div>
-        <div class="form-group">
-            <label>Password</label>
-            <input type="password" [(ngModel)]="password" placeholder="abcd123" />
+        <div class="mb-5">
+            <label class="block mb-1.5 font-bold">Password</label>
+            <input type="password" [(ngModel)]="password" placeholder="abcd123"
+                class="w-full p-2 box-border border border-gray-300 rounded" />
         </div>
         <div class="actions">
-            <button (click)="onLogin()">Login</button>
+            <button (click)="onLogin()"
+                class="w-full p-2.5 bg-blue-500 text-white border-none rounded cursor-pointer hover:bg-blue-600 transition-colors">
+                Login
+            </button>
         </div>
-        <p *ngIf="error" class="error">{{ error }}</p>
+        <p *ngIf="error" class="text-red-500 mt-2.5 text-center">{{ error }}</p>
     </div>
 </div>

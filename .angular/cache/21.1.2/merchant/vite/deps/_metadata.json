@@ -1,19 +1,19 @@
 {
-  "hash": "d4af0edf",
+  "hash": "5a75e049",
   "configHash": "e459635d",
-  "lockfileHash": "226b5752",
-  "browserHash": "05b9ce3c",
+  "lockfileHash": "6f3a29f9",
+  "browserHash": "89908e8b",
   "optimized": {
     "@angular-architects/native-federation": {
       "src": "../../../../../../node_modules/@angular-architects/native-federation/src/index.js",
       "file": "@angular-architects_native-federation.js",
-      "fileHash": "800adc97",
+      "fileHash": "03a63578",
       "needsInterop": false
     },
     "es-module-shims": {
       "src": "../../../../../../node_modules/es-module-shims/dist/es-module-shims.js",
       "file": "es-module-shims.js",
-      "fileHash": "31035724",
+      "fileHash": "c380a23f",
       "needsInterop": true
     }
   },
