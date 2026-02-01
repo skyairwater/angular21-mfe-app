@@ -4,12 +4,13 @@
         <h2>Login</h2>
         <div class="mb-5">
             <label class="block mb-1.5 font-bold">Username</label>
-            <input type="text" [(ngModel)]="username" placeholder="merchantuser, credituser, wealthuser"
+            <input type="text" [(ngModel)]="username" (keyup.enter)="onLogin()"
+                placeholder="merchantuser, credituser, wealthuser"
                 class="w-full p-2 box-border border border-gray-300 rounded" />
         </div>
         <div class="mb-5">
             <label class="block mb-1.5 font-bold">Password</label>
-            <input type="password" [(ngModel)]="password" placeholder="abcd123"
+            <input type="password" [(ngModel)]="password" (keyup.enter)="onLogin()" placeholder="abcd123"
                 class="w-full p-2 box-border border border-gray-300 rounded" />
         </div>
         <div class="actions">
