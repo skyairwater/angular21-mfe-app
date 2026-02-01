@@ -4,7 +4,7 @@
         <h2>Login</h2>
         <div class="mb-5">
             <label class="block mb-1.5 font-bold">Username</label>
-            <input type="text" [(ngModel)]="username" (keyup.enter)="onLogin()"
+            <input type="text" [(ngModel)]="username" (keyup.enter)="onLogin()" #usernameInput
                 placeholder="merchantuser, credituser, wealthuser, admin"
                 class="w-full p-2 box-border border border-gray-300 rounded" />
         </div>
