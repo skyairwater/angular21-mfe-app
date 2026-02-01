@@ -6,7 +6,7 @@ import { LoginComponent } from './features/login/login.component';
 export const routes: Routes = [
     {
         path: '',
-        redirectTo: 'merchant', // Or login, but auth guard will catch it if we try to go to merchant
+        redirectTo: 'merchant/dashboard',
         pathMatch: 'full',
     },
     {
@@ -15,8 +15,8 @@ export const routes: Routes = [
     },
     {
         path: 'merchant',
-        loadComponent: () =>
-            loadRemoteModule('merchant', './Component').then((m) => m.App),
+        loadChildren: () =>
+            loadRemoteModule('merchant', './Routes').then((m) => m.routes),
         canActivate: [authGuard],
         data: { role: 'merchant' }
     },
