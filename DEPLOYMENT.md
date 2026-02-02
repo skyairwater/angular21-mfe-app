@@ -52,7 +52,11 @@ Even though we serve static files, it is best to build the project on the server
     ```
 
 4.  Build all applications:
-    Run the following commands one by one to build the Shell and all Remotes:
+    Run the following command to build the Shell and all Remotes:
+    ```bash
+    npm run build:all
+    ```
+    Alternatively, you can build them individually:
     ```bash
     npx ng build shell --configuration production
     npx ng build merchant --configuration production
@@ -60,10 +64,10 @@ Even though we serve static files, it is best to build the project on the server
     npx ng build wealth --configuration production
     ```
     This will create the artifacts in the `dist/` directory:
-    - `dist/shell`
-    - `dist/merchant`
-    - `dist/credit`
-    - `dist/wealth`
+    - `dist/shell/browser`
+    - `dist/merchant/browser`
+    - `dist/credit/browser`
+    - `dist/wealth/browser`
 
 ## Step 3: Configure Nginx
 We will configure Nginx to serve each application on its dedicated port.

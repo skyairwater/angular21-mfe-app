@@ -10,6 +10,11 @@
     "start:wealth": "ng serve wealth",
     "start:all": "npm-run-all --parallel start:shell start:merchant start:credit start:wealth",
     "build": "ng build",
+    "build:shell": "ng build shell --configuration production",
+    "build:merchant": "ng build merchant --configuration production",
+    "build:credit": "ng build credit --configuration production",
+    "build:wealth": "ng build wealth --configuration production",
+    "build:all": "npm-run-all build:shell build:merchant build:credit build:wealth",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
